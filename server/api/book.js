@@ -4,6 +4,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const Books = require("../models/Books");
 
+let books = [
+    {name: "Little Bear", author: "Elsa HolmeLund Minarik", pages: 63}
+];
+
 router.post("/book/", (req, res, next) => {
     Books.findOne({ name: req.body.name }, (err, name) => {
         if(err) return next(err);
@@ -21,5 +25,9 @@ router.post("/book/", (req, res, next) => {
         }
     });
 })
+
+router.get("/book/", (req, res) => {
+    res.json(books);
+});
 
 module.exports = router;
