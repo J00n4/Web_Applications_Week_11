@@ -2,7 +2,6 @@ const express = require("express");
 const Books = require("../models/Books");
 const router = express.Router();
 const mongoose = require("mongoose");
-const Books = require("../models/Books");
 
 let books = [
     {name: "Little Bear", author: "Elsa HolmeLund Minarik", pages: 63}
