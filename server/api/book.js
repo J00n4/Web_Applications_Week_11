@@ -9,6 +9,7 @@ let books = [
 ];
 
 router.post("/book/", (req, res, next) => {
+    console.log("This is right place");
     Books.findOne({ name: req.body.name }, (err, name) => {
         if(err) return next(err);
         if(!name) {
@@ -27,6 +28,7 @@ router.post("/book/", (req, res, next) => {
 })
 
 router.get("/book/", (req, res) => {
+    console.log("This is some place");
     res.json(books);
 });
 
