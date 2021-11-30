@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-function onSubmit(event) {
-  event.preventDefault();
+function onSubmit() {
+  //event.preventDefault();
   //const formData = new FormData(event.target);
 
   const bookName = document.getElementById("name").value;
